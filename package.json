@@ -1,0 +1,39 @@
+{
+  "name": "chambapay-celo-open-rails",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "agent:status": "tsx scripts/chamba-agent-cli.ts status",
+    "agent:register-8004": "tsx scripts/chamba-agent-cli.ts register-8004",
+    "agent:buy-loop": "tsx scripts/chamba-agent-cli.ts buy-loop",
+    "agent:sweep-tracks": "tsx scripts/chamba-agent-cli.ts sweep-tracks",
+    "agent:verify-tx": "tsx scripts/chamba-agent-cli.ts verify-tx"
+  },
+  "dependencies": {
+    "@celo/attribution-tags": "^0.5.0",
+    "@celo/buy": "^0.8.5",
+    "lucide-react": "^1.63.0",
+    "next": "16.4.3",
+    "ox": "^1.8.12",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "viem": "^2.57.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.0.5"
+  }
+}

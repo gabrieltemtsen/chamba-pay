@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07110C"/>
+      <stop offset="55%" stop-color="#0F261B"/>
+      <stop offset="100%" stop-color="#19422D"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2FEA5"/>
+      <stop offset="100%" stop-color="#A8F26A"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect x="18" y="18" width="476" height="476" rx="96" fill="none" stroke="#E2FEA5" stroke-opacity="0.32" stroke-width="6"/>
+  <circle cx="256" cy="216" r="118" fill="#133122" stroke="url(#lime)" stroke-width="10"/>
+  <path d="M276 126L194 228H254L236 306L318 204H258L276 126Z" fill="url(#lime)"/>
+  <text x="256" y="402" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="54" fill="#FFFFFF" letter-spacing="-1">CHAMBA<tspan fill="#E2FEA5">PAY</tspan></text>
+  <text x="256" y="444" text-anchor="middle" font-family="ui-monospace, monospace" font-weight="700" font-size="20" fill="#9BBAA8" letter-spacing="3">TU MONEY · SIN BORDERS</text>
+</svg>
