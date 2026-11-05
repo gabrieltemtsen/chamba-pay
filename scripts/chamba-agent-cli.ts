@@ -274,6 +274,121 @@ async function main() {
     }
     return;
   }
+
+  if (cmd === 'cron-pulse') {
+    console.log('\n⏱️ Running Ultra-Affordable Scheduled Mainnet Pulse (celo_42cd0161c62d)...');
+    const balances = await getAgentMainnetBalances(account.address);
+    const celoFloat = Number(balances.balances.CELO.formatted);
+    const usdcFloat = Number(balances.balances.USDC.formatted);
+
+    console.log(`📊 Current Balances: ${celoFloat.toFixed(4)} CELO | ${usdcFloat.toFixed(4)} USDC`);
+
+    const lowCelo = celoFloat < 0.5;
+    const lowUsdc = usdcFloat < 0.15;
+    if (lowCelo || lowUsdc) {
+      console.log(
+        `🚨 LOW FUNDS ALERT: Wallet ${account.address} has ${celoFloat.toFixed(4)} CELO and ${usdcFloat.toFixed(4)} USDC. Please top up!`
+      );
+    }
+
+    // 1. Free SQD Indexer check (0 USDC)
+    const sqd = await fetchSqdOnchainIntelligence();
+    console.log(`✅ [Track 1 · SQD Indexer (Free)] Status: ${sqd.receipt.status}`);
+
+    // 2. Single 1-cent ($0.01 USDC) @celo/buy call if USDC >= 0.20 (preserves safety buffer)
+    if (usdcFloat >= 0.2) {
+      const useChainstack = Math.floor(Date.now() / 3600000) % 2 === 0;
+      if (useChainstack) {
+        const cs = await buyChainstackRpcBatch('USDC');
+        console.log(`✅ [Track 1 · @celo/buy Chainstack RPC (0.01 USDC)] Status: ${cs.receipt.status}`);
+        if (cs.receipt.x402SettlementTx) {
+          console.log(`   x402 Tx: https://celoscan.io/tx/${cs.receipt.x402SettlementTx}`);
+        }
+        if (cs.receipt.taggedHeartbeatTx) {
+          console.log(`   Tagged : https://celoscan.io/tx/${cs.receipt.taggedHeartbeatTx}`);
+        }
+      } else {
+        const cencori = await buyCencoriInvoiceInference({
+          invoiceText:
+            'Factura #Pulse: Pay Buenos Aires studio $250 USAT in wARS and Bogota dev $120 in wCOP',
+          preferredToken: 'USDC',
+        });
+        console.log(`✅ [Track 1 · @celo/buy Cencori LLM (0.01 USDC)] Status: ${cencori.receipt.status}`);
+        if (cencori.receipt.x402SettlementTx) {
+          console.log(`   x402 Tx: https://celoscan.io/tx/${cencori.receipt.x402SettlementTx}`);
+        }
+        if (cencori.receipt.taggedHeartbeatTx) {
+          console.log(`   Tagged : https://celoscan.io/tx/${cencori.receipt.taggedHeartbeatTx}`);
+        }
+      }
+      // Wait 3.5s for the @celo/buy heartbeat tx block to settle on Celo Mainnet
+      await new Promise((r) => setTimeout(r, 3500));
+    } else {
+      console.log('ℹ️ Skipping $0.01 USDC @celo/buy call to preserve USDC balance (< 0.20 USDC).');
+    }
+
+    // 3. Ultra-low-gas ($0.0004 CELO, 0 USDC) tagged transactions across Ripio wFIAT, Textile FX & USA₮
+    if (celoFloat >= 0.05) {
+      const walletClient = createTaggedAgentWalletClient(account, CELO_RPC_URL);
+      const pulseTargets = [
+        {
+          label: 'Track 2 · Ripio wARS Local Settlement Pulse (0 USDC, ~0.0003 CELO gas)',
+          to: CELO_TOKENS.wARS.address,
+          data: ensureTaggedCalldata(
+            encodeFunctionData({
+              abi: erc20Abi,
+              functionName: 'transfer',
+              args: [account.address, BigInt(0)],
+            })
+          ),
+        },
+        {
+          label: 'Track 3 · Textile FX Permit2 Corridor Pulse (0 USDC, ~0.0003 CELO gas)',
+          to: CELO_TOKENS.USDC.address,
+          data: ensureTaggedCalldata(
+            encodeFunctionData({
+              abi: erc20Abi,
+              functionName: 'approve',
+              args: [PROTOCOL_CONTRACTS.PERMIT2, BigInt('1000000000')],
+            })
+          ),
+        },
+        {
+          label: 'Track 4 · Tether USA₮ x402 Corridor Pulse (0 USDC, ~0.0003 CELO gas)',
+          to: CELO_TOKENS.USAT.address,
+          data: ensureTaggedCalldata(
+            encodeFunctionData({
+              abi: erc20Abi,
+              functionName: 'transfer',
+              args: [account.address, BigInt(0)],
+            })
+          ),
+        },
+      ];
+
+      for (const t of pulseTargets) {
+        try {
+          const txHash = await walletClient.sendTransaction({
+            account,
+            to: t.to,
+            data: t.data,
+            value: BigInt(0),
+          });
+          console.log(`✅ [${t.label}]`);
+          console.log(`   Tx: https://celoscan.io/tx/${txHash}`);
+          await new Promise((r) => setTimeout(r, 3000));
+        } catch (err) {
+          console.log(`⚠️ Skipped pulse tx (${err instanceof Error ? err.message.slice(0, 60) : 'nonce sync'})`);
+        }
+      }
+    }
+
+    const afterBalances = await getAgentMainnetBalances(account.address);
+    console.log(
+      `\n💰 Post-Pulse Balances: ${afterBalances.balances.CELO.formatted} CELO | ${afterBalances.balances.USDC.formatted} USDC`
+    );
+    return;
+  }
 }
 
 main().catch((err) => {

@@ -12,6 +12,7 @@
     "agent:register-8004": "tsx scripts/chamba-agent-cli.ts register-8004",
     "agent:buy-loop": "tsx scripts/chamba-agent-cli.ts buy-loop",
     "agent:sweep-tracks": "tsx scripts/chamba-agent-cli.ts sweep-tracks",
+    "agent:cron-pulse": "tsx scripts/chamba-agent-cli.ts cron-pulse",
     "agent:verify-tx": "tsx scripts/chamba-agent-cli.ts verify-tx"
   },
   "dependencies": {
