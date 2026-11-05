@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06100B"/>
+      <stop offset="50%" stop-color="#0B1F16"/>
+      <stop offset="100%" stop-color="#113022"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D2319"/>
+      <stop offset="100%" stop-color="#08160F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <rect x="60" y="36" width="560" height="44" rx="22" fill="#E2FEA5"/>
+  <text x="340" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="18" fill="#06100B">TRACKS 2, 3 &amp; 4 · RIPIO wFIAT + TEXTILE FX + USA₮ x402</text>
+  <rect x="640" y="36" width="460" height="44" rx="22" fill="#0F291E" stroke="#E2FEA5" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="870" y="64" text-anchor="middle" font-family="ui-monospace, monospace" font-weight="700" font-size="17" fill="#E2FEA5">Celo Mainnet (42220) · Tag: celo_42cd0161c62d</text>
+
+  <!-- Left Panel: Open Corridor FX & Ripio wFIAT Studio -->
+  <rect x="60" y="106" width="820" height="834" rx="32" fill="url(#card)" stroke="#2F7A4F" stroke-width="2"/>
+  <text x="100" y="160" font-family="ui-monospace, monospace" font-weight="800" font-size="15" fill="#E2FEA5">★ TEXTILE FX (0xa9AA0a...35b3) + RIPIO LOCAL RAILS</text>
+  <text x="100" y="206" font-family="system-ui, sans-serif" font-weight="900" font-size="36" fill="#FFFFFF">2. Open Corridor FX &amp; Ripio wFIAT Studio</text>
+
+  <!-- 6 Ripio wFIAT Badges -->
+  <g transform="translate(100, 236)" font-family="ui-monospace, monospace">
+    <rect x="0" y="0" width="234" height="108" rx="18" fill="#07140E" stroke="#E2FEA5" stroke-width="2"/>
+    <text x="20" y="34" font-weight="800" font-size="20" fill="#FFFFFF">🇦🇷 wARS (Argentina)</text>
+    <text x="20" y="62" font-size="13" fill="#9BBAA8">0x0dc4f9...29d90d</text>
+    <text x="20" y="88" font-size="13" fill="#E2FEA5">Tx: 0xc6fc10b4...df17 ✓</text>
+
+    <rect x="252" y="0" width="234" height="108" rx="18" fill="#07140E" stroke="#E2FEA5" stroke-width="2"/>
+    <text x="272" y="34" font-weight="800" font-size="20" fill="#FFFFFF">🇧🇷 wBRL (Brazil)</text>
+    <text x="272" y="62" font-size="13" fill="#9BBAA8">0xd76f5f...e4390e0</text>
+    <text x="272" y="88" font-size="13" fill="#E2FEA5">Tx: 0x72905030...c72a ✓</text>
+
+    <rect x="504" y="0" width="234" height="108" rx="18" fill="#07140E" stroke="#E2FEA5" stroke-width="2"/>
+    <text x="524" y="34" font-weight="800" font-size="20" fill="#FFFFFF">🇲🇽 wMXN (Mexico)</text>
+    <text x="524" y="62" font-size="13" fill="#9BBAA8">0x337e74...d610d34</text>
+    <text x="524" y="88" font-size="13" fill="#E2FEA5">Tx: 0x88f29b86...1122 ✓</text>
+
+    <rect x="0" y="126" width="234" height="108" rx="18" fill="#07140E" stroke="#2F7A4F" stroke-width="2"/>
+    <text x="20" y="160" font-weight="800" font-size="20" fill="#FFFFFF">🇨🇴 wCOP (Colombia)</text>
+    <text x="20" y="188" font-size="13" fill="#9BBAA8">0x8a1D45...91e2D76</text>
+    <text x="20" y="214" font-size="13" fill="#E2FEA5">Tx: 0x1c9a74e5...9adf ✓</text>
+
+    <rect x="252" y="126" width="234" height="108" rx="18" fill="#07140E" stroke="#2F7A4F" stroke-width="2"/>
+    <text x="272" y="160" font-weight="800" font-size="20" fill="#FFFFFF">🇵🇪 wPEN (Peru)</text>
+    <text x="272" y="188" font-size="13" fill="#9BBAA8">0x4F34c8...9F2eBE</text>
+    <text x="272" y="214" font-size="13" fill="#E2FEA5">Tx: 0x3c1171b8...d328 ✓</text>
+
+    <rect x="504" y="126" width="234" height="108" rx="18" fill="#07140E" stroke="#2F7A4F" stroke-width="2"/>
+    <text x="524" y="160" font-weight="800" font-size="20" fill="#FFFFFF">🇨🇱 wCLP (Chile)</text>
+    <text x="524" y="188" font-size="13" fill="#9BBAA8">0x61D450...59768651</text>
+    <text x="524" y="214" font-size="13" fill="#E2FEA5">Tx: 0x867e4cbc...cbaf ✓</text>
+  </g>
+
+  <!-- Corridor Quote Breakdown -->
+  <rect x="100" y="498" width="740" height="404" rx="24" fill="#07140E" stroke="#E2FEA5" stroke-opacity="0.45" stroke-width="2"/>
+  <text x="130" y="542" font-family="ui-monospace, monospace" font-weight="800" font-size="17" fill="#E2FEA5">TEXTILE FX + RIPIO RAMP EXECUTION QUOTE (USA₮ → wARS):</text>
+  <g font-family="ui-monospace, monospace" font-size="18" fill="#FFFFFF">
+    <text x="130" y="590" fill="#9BBAA8">Reactor Contract  :</text>
+    <text x="370" y="590">0xa9AA0a64769cBed4d3B1Ceb4Df01CdE915C235b3</text>
+
+    <text x="130" y="632" fill="#9BBAA8">Permit2 Contract  :</text>
+    <text x="370" y="632">0x000000000022D473030F116dDEE9F6B43aC78BA3</text>
+
+    <text x="130" y="674" fill="#9BBAA8">Corridor Tx Hash  :</text>
+    <text x="370" y="674" fill="#E2FEA5">0x930e1ec1d1cdf9a88b71133e4ef188d424f103b1...</text>
+
+    <text x="130" y="716" fill="#9BBAA8">cNGN Corridor Tx  :</text>
+    <text x="370" y="716" fill="#E2FEA5">0x9b70a9695388b3eeac53ffe689f9851dee39cdef...</text>
+
+    <text x="130" y="758" fill="#9BBAA8">Ripio Off-Ramp URL:</text>
+    <text x="370" y="758" fill="#E2FEA5">https://ramp.ripio.com/offramp?country=AR&amp;chain=42220</text>
+  </g>
+  <rect x="130" y="796" width="680" height="72" rx="16" fill="#E2FEA5"/>
+  <text x="470" y="840" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="21" fill="#06100B">✓ Sign &amp; Broadcast Tagged Corridor Tx + Open Ripio Ramp</text>
+
+  <!-- Right Panel: USA₮ + x402 Machine Gate & ERC-8021 Verifier -->
+  <rect x="910" y="106" width="630" height="834" rx="32" fill="url(#card)" stroke="#2F7A4F" stroke-width="2"/>
+  <text x="950" y="160" font-family="ui-monospace, monospace" font-weight="800" font-size="15" fill="#E2FEA5">★ TRACK 4 · USA₮ WITH CELO x402 FACILITATOR</text>
+  <text x="950" y="206" font-family="system-ui, sans-serif" font-weight="900" font-size="34" fill="#FFFFFF">3. x402 Gate &amp; Tag Verifier</text>
+
+  <rect x="950" y="236" width="550" height="310" rx="22" fill="#07140E" stroke="#E2FEA5" stroke-width="2"/>
+  <text x="978" y="276" font-family="ui-monospace, monospace" font-weight="800" font-size="16" fill="#E2FEA5">HTTP 402 PAYMENT REQUIRED (/api/x402-execute)</text>
+  <text x="978" y="314" font-family="ui-monospace, monospace" font-size="15" fill="#FFFFFF">Facilitator: https://api.x402.celo.org/settle</text>
+  <text x="978" y="346" font-family="ui-monospace, monospace" font-size="15" fill="#FFFFFF">Signer     : 0x0d74D5Cefd2e7F24E623330ebE3d8D4cB45fFB48</text>
+  <text x="978" y="382" font-family="ui-monospace, monospace" font-size="15" fill="#E2FEA5">• USA₮ (0xD2ab3C...F771) · EIP-3009 Gasless</text>
+  <text x="978" y="414" font-family="ui-monospace, monospace" font-size="15" fill="#E2FEA5">• wARS (0x0dc4f9...d90d) · Permit2 Gasless</text>
+  <text x="978" y="446" font-family="ui-monospace, monospace" font-size="15" fill="#E2FEA5">• wBRL (0xd76f5f...90e0) · Permit2 Gasless</text>
+  <text x="978" y="486" font-family="ui-monospace, monospace" font-size="14" fill="#9BBAA8">USA₮ Tx: 0x2b83a8b90bbdb38a058def21721650cdf38988d1...</text>
+
+  <!-- ERC-8021 Tag Verifier -->
+  <rect x="950" y="574" width="550" height="328" rx="22" fill="#07140E" stroke="#2F7A4F" stroke-width="2"/>
+  <text x="978" y="616" font-family="ui-monospace, monospace" font-weight="800" font-size="17" fill="#E2FEA5">🛡️ ERC-8021 ATTRIBUTION TAG VERIFIER</text>
+  <text x="978" y="654" font-family="ui-monospace, monospace" font-size="15" fill="#9BBAA8">Decoded Tag Code :</text>
+  <text x="1180" y="654" font-family="ui-monospace, monospace" font-weight="800" font-size="18" fill="#E2FEA5">celo_42cd0161c62d ✓</text>
+  <text x="978" y="692" font-family="ui-monospace, monospace" font-size="15" fill="#9BBAA8">ERC-8021 Marker  :</text>
+  <text x="1180" y="692" font-family="ui-monospace, monospace" font-weight="800" font-size="16" fill="#FFFFFF">8021802180218021 (Schema 0)</text>
+  <text x="978" y="732" font-family="ui-monospace, monospace" font-size="14" fill="#9BBAA8">Encoded Calldata Suffix:</text>
+  <text x="978" y="762" font-family="ui-monospace, monospace" font-size="13" fill="#E2FEA5">0x63656c6f5f343263643031363163363264</text>
+  <text x="978" y="786" font-family="ui-monospace, monospace" font-size="13" fill="#E2FEA5">110080218021802180218021802180218021</text>
+  <rect x="978" y="814" width="494" height="58" rx="14" fill="#133323" stroke="#E2FEA5"/>
+  <text x="1225" y="850" text-anchor="middle" font-family="ui-monospace, monospace" font-weight="800" font-size="16" fill="#E2FEA5">✓ 15 / 15 Mainnet Txs Verified with verifyTx()</text>
+</svg>

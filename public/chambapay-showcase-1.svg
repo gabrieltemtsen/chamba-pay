@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06100B"/>
+      <stop offset="50%" stop-color="#0B1F16"/>
+      <stop offset="100%" stop-color="#113022"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D2319"/>
+      <stop offset="100%" stop-color="#08160F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <!-- Top Bar -->
+  <rect x="60" y="36" width="240" height="42" rx="21" fill="#E2FEA5"/>
+  <text x="180" y="63" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="18" fill="#06100B">CELO MAINNET · 42220</text>
+  <rect x="320" y="36" width="310" height="42" rx="21" fill="#0F291E" stroke="#E2FEA5" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="475" y="63" text-anchor="middle" font-family="ui-monospace, monospace" font-weight="700" font-size="17" fill="#E2FEA5">Tag: celo_42cd0161c62d ✓</text>
+  <rect x="650" y="36" width="430" height="42" rx="21" fill="#0F291E" stroke="#E2FEA5" stroke-opacity="0.4" stroke-width="2"/>
+  <text x="865" y="63" text-anchor="middle" font-family="ui-monospace, monospace" font-weight="700" font-size="17" fill="#E2FEA5">ERC-8004 Registry (0x8004A1...9a432) · 1 NFT</text>
+
+  <!-- Main Hero Card -->
+  <rect x="60" y="108" width="1480" height="430" rx="32" fill="url(#card)" stroke="#2F7A4F" stroke-width="2"/>
+  <rect x="104" y="148" width="390" height="36" rx="18" fill="#163828" stroke="#E2FEA5" stroke-opacity="0.35"/>
+  <text x="299" y="172" text-anchor="middle" font-family="ui-monospace, monospace" font-weight="700" font-size="15" fill="#E2FEA5">AGENTS ON OPEN RAILS · ALL 4 TRACKS UNIFIED</text>
+
+  <text x="104" y="254" font-family="system-ui, sans-serif" font-weight="900" font-size="68" fill="#FFFFFF">ChambaPay — <tspan fill="#E2FEA5" font-style="italic">Tu Money, Sin Borders.</tspan></text>
+  <text x="104" y="312" font-family="system-ui, sans-serif" font-weight="500" font-size="24" fill="#B8D4C5">Autonomous LatAm cross-border treasury, invoice &amp; payroll agent on Celo Mainnet.</text>
+  <text x="104" y="348" font-family="system-ui, sans-serif" font-weight="500" font-size="24" fill="#B8D4C5">Buys compute via <tspan fill="#E2FEA5" font-family="ui-monospace, monospace">@celo/buy (usebuy.ai)</tspan>, quotes FX on <tspan fill="#E2FEA5">Textile FX</tspan>, settles <tspan fill="#E2FEA5">USA₮ + Ripio wFIAT</tspan>.</text>
+
+  <!-- 4 Track Cards -->
+  <g transform="translate(104, 384)">
+    <rect x="0" y="0" width="210" height="114" rx="20" fill="#07130D" stroke="#E2FEA5" stroke-width="2"/>
+    <text x="20" y="34" font-family="ui-monospace, monospace" font-weight="800" font-size="14" fill="#E2FEA5">TRACK 1 · LOCK</text>
+    <text x="20" y="66" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">Build with buy</text>
+    <text x="20" y="94" font-family="system-ui, sans-serif" font-size="15" fill="#9BBAA8">Cencori + Chainstack + SQD</text>
+
+    <rect x="228" y="0" width="210" height="114" rx="20" fill="#07130D" stroke="#2F7A4F" stroke-width="2"/>
+    <text x="248" y="34" font-family="ui-monospace, monospace" font-weight="800" font-size="14" fill="#E2FEA5">TRACK 2 · LATAM</text>
+    <text x="248" y="66" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">Ripio wFIAT</text>
+    <text x="248" y="94" font-family="system-ui, sans-serif" font-size="15" fill="#9BBAA8">wARS, wBRL, wMXN, wCOP</text>
+
+    <rect x="456" y="0" width="210" height="114" rx="20" fill="#07130D" stroke="#2F7A4F" stroke-width="2"/>
+    <text x="476" y="34" font-family="ui-monospace, monospace" font-weight="800" font-size="14" fill="#E2FEA5">TRACK 3 · FX</text>
+    <text x="476" y="66" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">Textile FX</text>
+    <text x="476" y="94" font-family="system-ui, sans-serif" font-size="15" fill="#9BBAA8">LimitOrderReactor Swaps</text>
+
+    <rect x="684" y="0" width="210" height="114" rx="20" fill="#07130D" stroke="#2F7A4F" stroke-width="2"/>
+    <text x="704" y="34" font-family="ui-monospace, monospace" font-weight="800" font-size="14" fill="#E2FEA5">TRACK 4 · x402</text>
+    <text x="704" y="66" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">USA₮ + x402</text>
+    <text x="704" y="94" font-family="system-ui, sans-serif" font-size="15" fill="#9BBAA8">api.x402.celo.org Gasless</text>
+  </g>
+
+  <!-- Right Agent Wallet Card -->
+  <rect x="1035" y="140" width="465" height="366" rx="24" fill="#06110C" stroke="#E2FEA5" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="1065" y="182" font-family="ui-monospace, monospace" font-weight="700" font-size="15" fill="#9BBAA8">AUTONOMOUS AGENT WALLET · ERC-8004</text>
+  <text x="1065" y="214" font-family="ui-monospace, monospace" font-weight="800" font-size="20" fill="#FFFFFF">0x62686897...940FA024</text>
+  <rect x="1335" y="190" width="135" height="32" rx="16" fill="#E2FEA5"/>
+  <text x="1402" y="211" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#06110C">ERC-8004 · 1 NFT</text>
+
+  <rect x="1065" y="240" width="200" height="82" rx="16" fill="#0D2218" stroke="#2F7A4F"/>
+  <text x="1085" y="270" font-family="ui-monospace, monospace" font-size="15" fill="#9BBAA8">CELO (Mainnet)</text>
+  <text x="1085" y="304" font-family="ui-monospace, monospace" font-weight="800" font-size="26" fill="#E2FEA5">16.0760</text>
+
+  <rect x="1280" y="240" width="190" height="82" rx="16" fill="#0D2218" stroke="#2F7A4F"/>
+  <text x="1300" y="270" font-family="ui-monospace, monospace" font-size="15" fill="#9BBAA8">USDC (Mainnet)</text>
+  <text x="1300" y="304" font-family="ui-monospace, monospace" font-weight="800" font-size="26" fill="#FFFFFF">1.1185</text>
+
+  <rect x="1065" y="342" width="405" height="135" rx="16" fill="#0A1B13" stroke="#E2FEA5" stroke-opacity="0.35"/>
+  <text x="1085" y="376" font-family="ui-monospace, monospace" font-weight="700" font-size="15" fill="#E2FEA5">✓ Verified Loops House On-Chain Checks:</text>
+  <text x="1085" y="406" font-family="ui-monospace, monospace" font-size="14" fill="#FFFFFF">• ERC-8004 Tx: 0x5af7d53567794948...293345</text>
+  <text x="1085" y="432" font-family="ui-monospace, monospace" font-size="14" fill="#FFFFFF">• Cencori x402: 0x16f1cf209212103...028b40</text>
+  <text x="1085" y="458" font-family="ui-monospace, monospace" font-size="14" fill="#FFFFFF">• Chainstack  : 0x76d0f16a454c1a3...8cf6b5</text>
+
+  <!-- Bottom Verified Mainnet Ledger -->
+  <rect x="60" y="570" width="1480" height="380" rx="32" fill="url(#card)" stroke="#2F7A4F" stroke-width="2"/>
+  <text x="104" y="624" font-family="system-ui, sans-serif" font-weight="800" font-size="30" fill="#FFFFFF">Confirmed Celo Mainnet Transactions (<tspan fill="#E2FEA5" font-family="ui-monospace, monospace">celo_42cd0161c62d</tspan>)</text>
+
+  <g font-family="ui-monospace, monospace" font-size="18" fill="#FFFFFF">
+    <text x="104" y="678" fill="#E2FEA5">1. [ERC-8004 Identity Mint]</text>
+    <text x="480" y="678">0x5af7d535677949486b771b9983ee64ef0cdf7716c20be710e7a7c7ad03293345</text>
+    <text x="1350" y="678" fill="#E2FEA5">✓ CONFIRMED</text>
+
+    <text x="104" y="724" fill="#E2FEA5">2. [@celo/buy Cencori LLM]</text>
+    <text x="480" y="724">0x16f1cf209212103f8022021ac1d32ae30e0ef60636647f9967b5152aa1028b40</text>
+    <text x="1350" y="724" fill="#E2FEA5">✓ CONFIRMED</text>
+
+    <text x="104" y="770" fill="#E2FEA5">3. [@celo/buy Chainstack RPC]</text>
+    <text x="480" y="770">0x76d0f16a454c1a3f930e735aaaf5a1e24e9ac6cd3a30faabf9745716998cf6b5</text>
+    <text x="1350" y="770" fill="#E2FEA5">✓ CONFIRMED</text>
+
+    <text x="104" y="816" fill="#E2FEA5">4. [Ripio wARS + wBRL + wMXN]</text>
+    <text x="480" y="816">0xc6fc10b47c41dbcd2edc63666f72016d426684832458e5a1ec29ecbe72d0df17</text>
+    <text x="1350" y="816" fill="#E2FEA5">✓ CONFIRMED</text>
+
+    <text x="104" y="862" fill="#E2FEA5">5. [Textile FX Permit2 + USDC]</text>
+    <text x="480" y="862">0x930e1ec1d1cdf9a88b71133e4ef188d424f103b1f9101551d9fca49f7664aa37</text>
+    <text x="1350" y="862" fill="#E2FEA5">✓ CONFIRMED</text>
+
+    <text x="104" y="908" fill="#E2FEA5">6. [Tether USA₮ x402 Rail]</text>
+    <text x="480" y="908">0x2b83a8b90bbdb38a058def21721650cdf38988d1132bd57c6dd36fd172b88948</text>
+    <text x="1350" y="908" fill="#E2FEA5">✓ CONFIRMED</text>
+  </g>
+</svg>
