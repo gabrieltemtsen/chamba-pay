@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'ChambaPay | Tu Money, Sin Borders — Autonomous Celo FX, Invoice & @celo/buy Agent',
+  title: 'ChambaPay — Cross-Border Payroll & Local Currency Treasury for Latin America',
   description:
-    'Autonomous LatAm cross-border treasury, invoice, and payroll agent on Celo Mainnet (Chain 42220). Powered by @celo/buy (usebuy.ai), USA₮ x402, Textile FX, Ripio wFIAT, and ERC-8004 identity (celo_42cd0161c62d).',
+    'Pay LatAm contractors, studios, and suppliers directly in local currency (wARS, wBRL, wMXN, wCOP, wPEN, wCLP) with autonomous AI invoice extraction, institutional FX routing, and instant Celo Mainnet settlement.',
 };
 
 export default function RootLayout({

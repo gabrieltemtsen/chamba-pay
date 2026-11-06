@@ -105,55 +105,55 @@ export default function ChambaPayDashboard() {
   >([
     {
       hash: '0x5af7d535677949486b771b9983ee64ef0cdf7716c20be710e7a7c7ad03293345',
-      label: 'ERC-8004 Identity Registry Mint (0x8004A1...9a432)',
+      label: 'Agent Identity Certificate · ERC-8004 Registry (0x8004A1...9a432)',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
     {
       hash: '0x16f1cf209212103f8022021ac1d32ae30e0ef60636647f9967b5152aa1028b40',
-      label: 'Track 1 · @celo/buy Cencori LLM Inference (x402 Settlement)',
+      label: 'AI Document Extraction Settlement · Cencori LLM (x402)',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
     {
       hash: '0x76d0f16a454c1a3f930e735aaaf5a1e24e9ac6cd3a30faabf9745716998cf6b5',
-      label: 'Track 1 · @celo/buy Chainstack Archive RPC Batch (x402 Settlement)',
+      label: 'On-Chain State Verification · Chainstack Archive Node (x402)',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
     {
       hash: '0xc6fc10b47c41dbcd2edc63666f72016d426684832458e5a1ec29ecbe72d0df17',
-      label: 'Track 2 · Ripio wARS Argentine Peso Settlement (Tagged)',
+      label: 'Buenos Aires Payroll Settlement · Ripio wARS (Argentine Peso)',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
     {
       hash: '0x729050303922baf86b3ad325ba6013e9b2ade25a9ea99a3d022f975e58e5c72a',
-      label: 'Track 2 · Ripio wBRL Brazilian Real Settlement (Tagged)',
+      label: 'São Paulo Vendor Payout · Ripio wBRL (Brazilian Real)',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
     {
       hash: '0x88f29b869500a6098681803ea2d052301b0c9d73383fec61012804b2f02d1122',
-      label: 'Track 2 · Ripio wMXN Mexican Peso Settlement (Tagged)',
+      label: 'Mexico City Contractor Settlement · Ripio wMXN (Mexican Peso)',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
     {
       hash: '0x1c9a74e5152002113e74c5b2405e108d6699655c78b21dfa80b43c38aa4c9adf',
-      label: 'Track 2 · Ripio wCOP Colombian Peso Settlement (Tagged)',
+      label: 'Bogotá Operations Disbursement · Ripio wCOP (Colombian Peso)',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
     {
       hash: '0x930e1ec1d1cdf9a88b71133e4ef188d424f103b1f9101551d9fca49f7664aa37',
-      label: 'Track 3 · Textile FX Permit2 Corridor Authorization (Tagged)',
+      label: 'Institutional FX Liquidity Vault · Textile FX Permit2',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
     {
       hash: '0x2b83a8b90bbdb38a058def21721650cdf38988d1132bd57c6dd36fd172b88948',
-      label: 'Track 4 · Tether USA₮ x402 Treasury Authorization (Tagged)',
+      label: 'USD Treasury Corridor Authorization · Tether USA₮ (x402)',
       tagVerified: true,
       timestamp: 'Celo Mainnet · Confirmed',
     },
@@ -439,47 +439,63 @@ export default function ChambaPayDashboard() {
 
   return (
     <div className="min-h-screen bg-[#08120E] text-[#F4FBEF] font-sans">
-      {/* TOP ATTRIBUTION & MAINNET GUARDRAIL BAR */}
-      <div className="border-b border-[#2F7A4F]/40 bg-[#0D1F18]/90 backdrop-blur-md sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 text-xs">
-          <div className="flex flex-wrap items-center gap-2.5">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#E2FEA5] text-[#08120E] font-bold tracking-wide uppercase">
-              <span className="size-2 rounded-full bg-[#1F5A38] animate-ping" />
-              Celo Mainnet · 42220
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#152E23] border border-[#E2FEA5]/30 text-[#E2FEA5] font-mono">
-              <ShieldCheck className="size-3.5 text-[#E2FEA5]" />
-              Tag: <strong>{CHAMBA_ATTRIBUTION_TAG}</strong>
-              <button
-                onClick={() => copyText('tag', CHAMBA_ATTRIBUTION_TAG)}
-                className="ml-1 hover:text-white transition"
-                title="Copy Attribution Tag"
+      {/* ENTERPRISE FINTECH NAVIGATION BAR */}
+      <header className="border-b border-[#2F7A4F]/40 bg-[#0A1812]/90 backdrop-blur-md sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2.5">
+              <div className="size-8 rounded-xl bg-[#E2FEA5] flex items-center justify-center text-[#08120E] font-black text-base shadow-sm">
+                ⚡
+              </div>
+              <div>
+                <span className="font-black text-lg tracking-tight text-white">
+                  Chamba<span className="text-[#E2FEA5]">Pay</span>
+                </span>
+                <span className="hidden sm:inline-block ml-2 text-[11px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-md bg-[#152E23] text-[#9BBAA8]">
+                  LatAm Treasury OS
+                </span>
+              </div>
+            </div>
+
+            <nav className="hidden md:flex items-center gap-5 text-xs font-medium text-[#B2CFC0]">
+              <a href="#autopilot" className="hover:text-[#E2FEA5] transition">
+                Invoice Autopilot
+              </a>
+              <a href="#corridors" className="hover:text-[#E2FEA5] transition">
+                FX & Local Ramps
+              </a>
+              <a href="#audit" className="hover:text-[#E2FEA5] transition">
+                Settlement Ledger
+              </a>
+              <a
+                href="/api/x402-execute"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-[#E2FEA5] transition inline-flex items-center gap-1"
               >
-                {copiedField === 'tag' ? <Check className="size-3.5" /> : <Copy className="size-3.5" />}
-              </button>
+                x402 API
+                <ExternalLink className="size-3" />
+              </a>
+            </nav>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 text-xs">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#152E23] border border-[#2F7A4F]/60 text-[#E2FEA5] font-medium">
+              <span className="size-2 rounded-full bg-[#E2FEA5] animate-pulse" />
+              Celo Mainnet
             </span>
+
             <a
               href={`https://8004scan.io/agents?chain=42220&search=${statusData?.agentWallet?.agentAddress || ''}`}
               target="_blank"
               rel="noreferrer"
-              className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#152E23] hover:bg-[#1E3F30] text-[#DCE8A6] transition"
+              className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#152E23] hover:bg-[#1E3F30] border border-[#2F7A4F]/40 text-[#DCE8A6] transition"
             >
               <BadgeCheck className="size-3.5 text-[#E2FEA5]" />
-              ERC-8004 Registry (`0x8004A1...9a432`)
+              ERC-8004 Verified Agent
               <ExternalLink className="size-3" />
             </a>
-          </div>
 
-          <div className="flex items-center gap-2">
-            <a
-              href="/api/x402-execute"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full border border-[#2F7A4F]/50 text-[#DCE8A6] hover:bg-[#152E23] transition font-mono"
-            >
-              HTTP 402 Gate
-              <ExternalLink className="size-3" />
-            </a>
             <button
               onClick={connectWallet}
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#E2FEA5] hover:bg-[#d2f882] text-[#08120E] font-bold transition cursor-pointer"
@@ -487,11 +503,11 @@ export default function ChambaPayDashboard() {
               <Wallet className="size-3.5" />
               {userAddress
                 ? `${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`
-                : 'Connect Celo Wallet / MiniPay'}
+                : 'Connect Wallet / MiniPay'}
             </button>
           </div>
         </div>
-      </div>
+      </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8 space-y-8">
         {/* HERO SECTION */}
@@ -500,77 +516,74 @@ export default function ChambaPayDashboard() {
             <div className="lg:col-span-7 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E2FEA5]/15 border border-[#E2FEA5]/30 text-[#E2FEA5] text-xs font-semibold uppercase tracking-wider">
                 <Sparkles className="size-3.5" />
-                Agents on Open Rails · All 4 Tracks Unified
+                Autonomous Cross-Border Payroll & Local Currency Treasury
               </div>
 
               <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-[1.05]">
-                ChambaPay{' '}
+                Pay LatAm teams in local currency.{' '}
                 <span className="text-[#E2FEA5] font-serif italic font-normal">
-                  — Tu Money, Sin Borders.
+                  Tu Money, Sin Borders.
                 </span>
               </h1>
 
               <p className="text-[#C7DFD1] text-base sm:text-lg leading-relaxed max-w-2xl">
-                The autonomous LatAm cross-border treasury, invoice, and payroll agent on{' '}
-                <strong className="text-white">Celo Mainnet</strong>. ChambaPay buys its own AI compute &
-                blockchain intelligence via{' '}
-                <span className="text-[#E2FEA5] font-mono font-semibold">@celo/buy (usebuy.ai)</span>,
-                settles USD corridors in <span className="text-[#E2FEA5] font-semibold">USA₮ over x402</span>,
-                routes local FX through <span className="text-[#E2FEA5] font-semibold">Textile FX</span>, and
-                pays out directly in{' '}
+                Drop any contractor invoice or payroll batch in Spanish, Portuguese, or English.{' '}
+                <strong className="text-white">ChambaPay</strong> autonomously extracts line items,
+                verifies on-chain liquidity, quotes institutional FX via{' '}
+                <span className="text-[#E2FEA5] font-semibold">Textile FX</span>, and settles directly in{' '}
                 <span className="text-[#E2FEA5] font-semibold">
-                  Ripio wFIAT (wARS, wBRL, wMXN, wCOP, wPEN, wCLP)
-                </span>
-                .
+                  USA₮, USDC, wARS, wBRL, wMXN, wCOP, wPEN, and wCLP
+                </span>{' '}
+                with instant local bank off-ramps.
               </p>
 
-              {/* 4 TRACK PILLS */}
+              {/* 4 ENTERPRISE PRODUCT PILLARS */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
                 <div className="rounded-2xl bg-[#08120E]/80 border border-[#E2FEA5]/40 p-3">
                   <div className="flex items-center justify-between text-xs text-[#E2FEA5] font-bold">
-                    <span>TRACK 1 · LOCK</span>
+                    <span>AI EXTRACTION</span>
                     <Cpu className="size-3.5" />
                   </div>
-                  <p className="text-sm font-bold text-white mt-1">Build with buy</p>
-                  <p className="text-[11px] text-[#9BBAA8]">Cencori LLM + Chainstack + SQD</p>
+                  <p className="text-sm font-bold text-white mt-1">Invoice Autopilot</p>
+                  <p className="text-[11px] text-[#9BBAA8]">Spanglish & PDF Parsing</p>
                 </div>
 
                 <div className="rounded-2xl bg-[#08120E]/80 border border-[#2F7A4F]/40 p-3">
                   <div className="flex items-center justify-between text-xs text-[#E2FEA5] font-bold">
-                    <span>TRACK 2 · LATAM</span>
+                    <span>6 LOCAL RAILS</span>
                     <Coins className="size-3.5" />
                   </div>
-                  <p className="text-sm font-bold text-white mt-1">Ripio wFIAT</p>
-                  <p className="text-[11px] text-[#9BBAA8]">wARS, wBRL, wMXN, wCOP, wPEN, wCLP</p>
+                  <p className="text-sm font-bold text-white mt-1">Local wFIAT</p>
+                  <p className="text-[11px] text-[#9BBAA8]">wARS, wBRL, wMXN, wCOP</p>
                 </div>
 
                 <div className="rounded-2xl bg-[#08120E]/80 border border-[#2F7A4F]/40 p-3">
                   <div className="flex items-center justify-between text-xs text-[#E2FEA5] font-bold">
-                    <span>TRACK 3 · FX</span>
+                    <span>INSTITUTIONAL FX</span>
                     <ArrowRightLeft className="size-3.5" />
                   </div>
-                  <p className="text-sm font-bold text-white mt-1">Textile FX</p>
-                  <p className="text-[11px] text-[#9BBAA8]">LimitOrderReactor RFQ Swaps</p>
+                  <p className="text-sm font-bold text-white mt-1">Direct RFQ Swaps</p>
+                  <p className="text-[11px] text-[#9BBAA8]">Saves up to 6.2% vs SWIFT</p>
                 </div>
 
                 <div className="rounded-2xl bg-[#08120E]/80 border border-[#2F7A4F]/40 p-3">
                   <div className="flex items-center justify-between text-xs text-[#E2FEA5] font-bold">
-                    <span>TRACK 4 · x402</span>
+                    <span>GASLESS API</span>
                     <Zap className="size-3.5" />
                   </div>
                   <p className="text-sm font-bold text-white mt-1">USA₮ + x402</p>
-                  <p className="text-[11px] text-[#9BBAA8]">api.x402.celo.org Gasless</p>
+                  <p className="text-[11px] text-[#9BBAA8]">Sub-Second Settlement</p>
                 </div>
               </div>
             </div>
 
-            {/* RIGHT COLUMN: AGENT IDENTITY CARD & WALLET TELEMETRY */}
+            {/* RIGHT COLUMN: CORPORATE TREASURY VAULT & AGENT IDENTITY */}
             <div className="lg:col-span-5 rounded-2xl bg-[#08120E]/90 border border-[#2F7A4F]/50 p-5 space-y-4">
               <div className="flex items-center justify-between border-b border-[#2F7A4F]/30 pb-3">
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-[11px] font-mono uppercase tracking-wider text-[#9BBAA8]">
-                      Autonomous Agent Wallet · ERC-8004
+                      Autonomous Treasury Vault
                     </span>
                     {statusData?.erc8004Status?.isRegisteredOnMainnet && (
                       <a
@@ -580,7 +593,7 @@ export default function ChambaPayDashboard() {
                         className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#E2FEA5]/20 border border-[#E2FEA5]/50 text-[#E2FEA5] text-[10px] font-bold"
                       >
                         <BadgeCheck className="size-3" />
-                        ERC-8004 Live ({statusData.erc8004Status.nftCount} NFT)
+                        Verified Agent ID
                       </a>
                     )}
                   </div>
@@ -607,7 +620,7 @@ export default function ChambaPayDashboard() {
                 <button
                   onClick={fetchAgentStatus}
                   className="p-2 rounded-xl bg-[#152E23] hover:bg-[#1E3F30] text-[#E2FEA5] transition cursor-pointer"
-                  title="Refresh Celo Mainnet Balances"
+                  title="Refresh Treasury Balances"
                 >
                   <RefreshCw className={`size-4 ${loadingStatus ? 'animate-spin' : ''}`} />
                 </button>
@@ -632,21 +645,21 @@ export default function ChambaPayDashboard() {
                 })}
               </div>
 
-              {/* ACTION BUTTONS FOR ONCHAIN PROOF */}
+              {/* TREASURY QUICK ACTIONS */}
               <div className="pt-1 flex flex-wrap gap-2">
                 <button
-                  onClick={() => sendTaggedMainnetTransaction('erc8004_register')}
+                  onClick={() => sendTaggedMainnetTransaction('tagged_settlement')}
                   className="flex-1 min-w-[160px] inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-[#E2FEA5] hover:bg-[#d2f882] text-[#08120E] font-bold text-xs transition cursor-pointer"
                 >
-                  <BadgeCheck className="size-4" />
-                  Mint ERC-8004 ID (Tagged)
+                  <Send className="size-3.5" />
+                  Execute Instant Settlement
                 </button>
                 <button
-                  onClick={() => sendTaggedMainnetTransaction('tagged_settlement')}
+                  onClick={() => sendTaggedMainnetTransaction('erc8004_register')}
                   className="flex-1 min-w-[160px] inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl bg-[#152E23] hover:bg-[#1F4233] border border-[#E2FEA5]/40 text-[#E2FEA5] font-bold text-xs transition cursor-pointer"
                 >
-                  <Send className="size-3.5" />
-                  Send Tagged Mainnet Tx
+                  <BadgeCheck className="size-4" />
+                  Sync Agent Certificate
                 </button>
               </div>
 
@@ -659,31 +672,29 @@ export default function ChambaPayDashboard() {
           </div>
         </section>
 
-        {/* PRIORITY TRACK: BUILD WITH BUY (usebuy.ai) + INVOICE AI DESK */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* LEFT 7 COLS: SPANGLISH AI INVOICE & PAYROLL DESK */}
+        {/* SECTION 1: AI INVOICE & PAYROLL AUTOPILOT */}
+        <section id="autopilot" className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          {/* LEFT 7 COLS: AI INVOICE & PAYROLL COMPOSER */}
           <div className="lg:col-span-7 rounded-3xl border border-[#2F7A4F]/40 bg-[#0D1E17] p-6 space-y-5">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <span className="text-xs font-mono uppercase tracking-wider text-[#E2FEA5]">
-                  ★ Priority Track: Build with buy (usebuy.ai) + Ripio LatAm
+                  Automated Accounts Payable & Contractor Disbursements
                 </span>
                 <h2 className="text-2xl font-bold text-white mt-0.5">
-                  1. Autonomous Chamba Invoice & Payroll Desk
+                  AI Invoice & Payroll Autopilot
                 </h2>
               </div>
               <span className="px-3 py-1 rounded-full bg-[#152E23] border border-[#2F7A4F] text-xs font-mono text-[#E2FEA5]">
-                Cencori `maximo-atlas-1.3` · 0.01 {preferredToken}
+                Autonomous Engine · Active
               </span>
             </div>
 
             <p className="text-sm text-[#B2CFC0]">
-              Paste any LatAm freelancer invoice, payroll instruction, or Spanglish message. Every run
-              autonomously calls <code className="text-[#E2FEA5]">@celo/buy</code> across{' '}
-              <strong>Cencori LLM Inference</strong>, <strong>Chainstack Celo RPC</strong>, and{' '}
-              <strong>SQD Onchain Datasets</strong>, then quotes the optimal{' '}
-              <strong>Textile FX → Ripio wFIAT</strong> settlement with tag{' '}
-              <code className="text-[#E2FEA5]">{CHAMBA_ATTRIBUTION_TAG}</code>.
+              Paste any vendor bill, contractor invoice, or WhatsApp payment request. ChambaPay
+              autonomously provisions AI extraction (`Cencori`), verifies real-time Celo state
+              (`Chainstack` & `SQD`), and locks in the best local currency payout rate across{' '}
+              <strong>Argentina, Brazil, Mexico, Colombia, Peru, and Chile</strong>.
             </p>
 
             {/* PRESET INVOICE CHIPS */}
@@ -709,28 +720,28 @@ export default function ChambaPayDashboard() {
                 value={invoiceText}
                 onChange={(e) => setInvoiceText(e.target.value)}
                 className="w-full rounded-2xl bg-[#08120E] border border-[#2F7A4F]/60 focus:border-[#E2FEA5] p-4 text-sm text-white font-mono outline-none"
-                placeholder="Describe the LatAm invoice or payroll rule in Spanish, Portuguese, or English..."
+                placeholder="Paste contractor invoice or payroll instruction in Spanish, Portuguese, or English..."
               />
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div>
                   <label className="block text-[11px] font-mono uppercase text-[#9BBAA8] mb-1">
-                    Pay `usebuy.ai` & Settle With
+                    Source Treasury Asset
                   </label>
                   <select
                     value={preferredToken}
                     onChange={(e) => setPreferredToken(e.target.value as 'USAT' | 'USDC' | 'USDT')}
                     className="w-full rounded-xl bg-[#08120E] border border-[#2F7A4F]/60 px-3 py-2.5 text-sm text-white font-mono"
                   >
-                    <option value="USAT">🇺🇸 USA₮ (Tether America USD · x402)</option>
-                    <option value="USDC">💵 USDC (Circle USD · x402)</option>
-                    <option value="USDT">🌐 USD₮ (Tether USD · x402)</option>
+                    <option value="USAT">🇺🇸 USA₮ (Tether America USD)</option>
+                    <option value="USDC">💵 USDC (Circle USD)</option>
+                    <option value="USDT">🌐 USD₮ (Tether USD)</option>
                   </select>
                 </div>
 
                 <div className="sm:col-span-2">
                   <label className="block text-[11px] font-mono uppercase text-[#9BBAA8] mb-1">
-                    Recipient LatAm Wallet (Celo Mainnet / MiniPay)
+                    Beneficiary Wallet Address (Celo / MiniPay / Ripio)
                   </label>
                   <input
                     type="text"
@@ -749,8 +760,8 @@ export default function ChambaPayDashboard() {
                 >
                   <Zap className="size-4" />
                   {runningPipeline
-                    ? 'Buying Cencori + Chainstack + SQD via @celo/buy...'
-                    : 'Run Autonomous @celo/buy + FX Pipeline'}
+                    ? 'Extracting Invoice & Routing FX Corridor...'
+                    : 'Parse Invoice & Quote Instant Local Payout'}
                 </button>
 
                 <button
@@ -758,7 +769,7 @@ export default function ChambaPayDashboard() {
                   disabled={runningPipeline}
                   className="px-4 py-3 rounded-2xl bg-[#152E23] hover:bg-[#1F4233] border border-[#2F7A4F] text-xs font-mono text-[#E2FEA5] transition cursor-pointer"
                 >
-                  + Buy Cencori LLM
+                  AI Extract Only
                 </button>
 
                 <button
@@ -766,7 +777,7 @@ export default function ChambaPayDashboard() {
                   disabled={runningPipeline}
                   className="px-4 py-3 rounded-2xl bg-[#152E23] hover:bg-[#1F4233] border border-[#2F7A4F] text-xs font-mono text-[#E2FEA5] transition cursor-pointer"
                 >
-                  + Buy Chainstack RPC
+                  Verify Node State
                 </button>
               </div>
             </div>
@@ -777,7 +788,7 @@ export default function ChambaPayDashboard() {
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#2F7A4F]/30 pb-3">
                   <div>
                     <span className="text-[11px] font-mono text-[#E2FEA5] uppercase">
-                      Cencori AI Extraction Result
+                      Verified Payout Instruction
                     </span>
                     <h3 className="text-lg font-bold text-white">
                       {parsedInvoice.vendorName} ({parsedInvoice.recipientCountry})
@@ -794,33 +805,33 @@ export default function ChambaPayDashboard() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="rounded-xl bg-[#0E2018] p-3 border border-[#2F7A4F]/30">
-                    <span className="text-[11px] text-[#9BBAA8] font-mono">1. Inbound (x402 USA₮)</span>
+                    <span className="text-[11px] text-[#9BBAA8] font-mono">1. Treasury Debit</span>
                     <p className="text-lg font-black text-white mt-0.5">
                       {corridorQuote.amountIn.toLocaleString()} {corridorQuote.fromToken}
                     </p>
                     <span className="text-[10px] font-mono text-[#E2FEA5]">
-                      api.x402.celo.org (EIP-3009)
+                      Gasless x402 Settlement
                     </span>
                   </div>
 
                   <div className="rounded-xl bg-[#0E2018] p-3 border border-[#2F7A4F]/30">
-                    <span className="text-[11px] text-[#9BBAA8] font-mono">2. Textile FX Rate</span>
+                    <span className="text-[11px] text-[#9BBAA8] font-mono">2. Institutional FX Rate</span>
                     <p className="text-lg font-black text-[#E2FEA5] mt-0.5">
                       1 {corridorQuote.fromToken} = {corridorQuote.textileReactorRate}{' '}
                       {corridorQuote.toToken}
                     </p>
                     <span className="text-[10px] font-mono text-[#9BBAA8]">
-                      Reactor `0xa9AA...35b3`
+                      Textile FX Orderbook
                     </span>
                   </div>
 
                   <div className="rounded-xl bg-[#0E2018] p-3 border border-[#2F7A4F]/30">
-                    <span className="text-[11px] text-[#9BBAA8] font-mono">3. Ripio wFIAT Payout</span>
+                    <span className="text-[11px] text-[#9BBAA8] font-mono">3. Net Local Payout</span>
                     <p className="text-lg font-black text-white mt-0.5">
                       {corridorQuote.amountOut.toLocaleString()} {corridorQuote.toToken}
                     </p>
                     <span className="text-[10px] font-mono text-[#E2FEA5]">
-                      1:1 Local Bank Off-Ramp Ready
+                      Instant Bank Off-Ramp Ready
                     </span>
                   </div>
                 </div>
@@ -835,8 +846,8 @@ export default function ChambaPayDashboard() {
                       className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#E2FEA5] hover:bg-[#d2f882] text-[#08120E] font-bold text-xs transition"
                     >
                       <Globe2 className="size-4" />
-                      1-Click Ripio Off-Ramp ({corridorQuote.amountOut.toLocaleString()}{' '}
-                      {corridorQuote.toToken} → Local Bank)
+                      Cash Out to Local Bank ({corridorQuote.amountOut.toLocaleString()}{' '}
+                      {corridorQuote.toToken} via Ripio)
                       <ExternalLink className="size-3.5" />
                     </a>
                   )}
@@ -869,7 +880,7 @@ export default function ChambaPayDashboard() {
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#152E23] hover:bg-[#1F4233] border border-[#2F7A4F] text-[#DCE8A6] font-bold text-xs transition"
                   >
-                    Ripio On-Ramp ({corridorQuote.toToken})
+                    Top Up Local {corridorQuote.toToken} (Ripio On-Ramp)
                     <ExternalLink className="size-3.5" />
                   </a>
                 </div>
@@ -877,25 +888,25 @@ export default function ChambaPayDashboard() {
             )}
           </div>
 
-          {/* RIGHT 5 COLS: LIVE @celo/buy AUTONOMOUS EXPENSE LEDGER */}
+          {/* RIGHT 5 COLS: AUTONOMOUS INFRASTRUCTURE TELEMETRY */}
           <div className="lg:col-span-5 rounded-3xl border border-[#2F7A4F]/40 bg-[#0D1E17] p-6 flex flex-col justify-between space-y-4">
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <Receipt className="size-5 text-[#E2FEA5]" />
                   <h2 className="text-xl font-bold text-white">
-                    Live `@celo/buy` Expense Ledger
+                    Autonomous Agent Operations
                   </h2>
                 </div>
                 <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-[#E2FEA5]/15 text-[#E2FEA5]">
-                  {buyReceipts.length} Service Calls
+                  {buyReceipts.length} Verified Ops
                 </span>
               </div>
 
               <p className="text-xs text-[#9BBAA8]">
-                Every time ChambaPay processes an invoice or checks corridor liquidity, it pays for
-                services it doesn&apos;t own via <code className="text-[#E2FEA5]">usebuy.ai</code> (Cencori
-                LLM, Chainstack Archive RPC, SQD Indexer).
+                ChambaPay operates as a self-sustaining economic agent on Celo Mainnet—autonomously
+                settling micro-payments over <code className="text-[#E2FEA5]">x402</code> for AI document
+                inference, archive RPC verification, and multi-chain indexing.
               </p>
 
               <div className="space-y-2.5 max-h-[460px] overflow-y-auto pr-1">
@@ -919,7 +930,7 @@ export default function ChambaPayDashboard() {
                     <p className="text-[#C7DFD1] text-[11px]">{item.description}</p>
 
                     <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-[#2F7A4F]/20 font-mono text-[10px] text-[#9BBAA8]">
-                      <span>Tag: {item.attributionTag}</span>
+                      <span>Audit ID: {item.attributionTag}</span>
                       {item.x402SettlementTx ? (
                         <a
                           href={`https://celoscan.io/tx/${item.x402SettlementTx}`}
@@ -927,7 +938,7 @@ export default function ChambaPayDashboard() {
                           rel="noreferrer"
                           className="text-[#E2FEA5] underline inline-flex items-center gap-1"
                         >
-                          x402 Tx: {item.x402SettlementTx.slice(0, 10)}...
+                          Settlement Tx: {item.x402SettlementTx.slice(0, 10)}...
                           <ExternalLink className="size-2.5" />
                         </a>
                       ) : item.taggedHeartbeatTx ? (
@@ -941,7 +952,7 @@ export default function ChambaPayDashboard() {
                           <ExternalLink className="size-2.5" />
                         </a>
                       ) : (
-                        <span className="text-[#DCE8A6]">402 Quote Verified</span>
+                        <span className="text-[#DCE8A6]">Verified</span>
                       )}
                     </div>
                   </div>
@@ -949,44 +960,44 @@ export default function ChambaPayDashboard() {
               </div>
             </div>
 
-            {/* CLI QUICK-COPY FOR JUDGES */}
+            {/* DEVELOPER API / CLI INTEGRATION */}
             <div className="rounded-2xl bg-[#08120E] border border-[#2F7A4F]/50 p-3.5 space-y-2">
               <div className="flex items-center justify-between text-xs">
                 <span className="font-mono text-[#E2FEA5] flex items-center gap-1.5">
                   <Terminal className="size-3.5" />
-                  Pay Our Agent via `@celo/buy` CLI (USA₮ x402)
+                  Headless ERP / CLI Integration (`x402`)
                 </span>
                 <button
                   onClick={() =>
                     copyText(
                       'buyCli',
-                      `npx --yes @celo/buy@0.8.5 curl --token USAT --max-amount 0.02 -X POST -H "content-type: application/json" -d '{"invoiceText":"Pay Buenos Aires dev $250 USAT in wARS"}' https://chambapay.celo.org/api/x402-execute`
+                      `npx --yes @celo/buy@0.8.5 curl --token USAT --max-amount 0.02 -X POST -H "content-type: application/json" -d '{"invoiceText":"Pay Buenos Aires dev $250 USAT in wARS"}' https://chamba-pay.vercel.app/api/x402-execute`
                     )
                   }
                   className="text-[#E2FEA5] hover:text-white text-[11px] font-mono flex items-center gap-1"
                 >
                   {copiedField === 'buyCli' ? <Check className="size-3" /> : <Copy className="size-3" />}
-                  Copy CLI
+                  Copy Command
                 </button>
               </div>
               <pre className="text-[10px] font-mono text-[#9BBAA8] overflow-x-auto whitespace-pre-wrap">
-                {`npx @celo/buy@0.8.5 curl --token USAT --max-amount 0.02 -X POST https://chambapay.celo.org/api/x402-execute`}
+                {`npx @celo/buy curl --token USAT --max-amount 0.02 -X POST https://chamba-pay.vercel.app/api/x402-execute`}
               </pre>
             </div>
           </div>
         </section>
 
-        {/* INTERACTIVE TEXTILE FX CORRIDOR MATRIX + ERC-8021 TAG VERIFIER */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* LEFT 6 COLS: TEXTILE FX + RIPIO wFIAT CORRIDOR SIMULATOR */}
+        {/* SECTION 2: CROSS-BORDER FX DESK & ON-CHAIN AUDIT LEDGER */}
+        <section id="corridors" className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          {/* LEFT 6 COLS: MULTI-CURRENCY CORRIDOR DESK */}
           <div className="lg:col-span-6 rounded-3xl border border-[#2F7A4F]/40 bg-[#0D1E17] p-6 space-y-4">
             <div className="flex items-center justify-between">
               <div>
                 <span className="text-xs font-mono uppercase text-[#E2FEA5]">
-                  Open Corridors: Textile FX + USA₮ + Ripio wFIAT
+                  Direct Local Currency Liquidity
                 </span>
                 <h2 className="text-xl font-bold text-white mt-0.5">
-                  2. Multi-Currency Corridor Matrix
+                  Cross-Border FX Desk & Supported Rails
                 </h2>
               </div>
               <a
@@ -995,14 +1006,14 @@ export default function ChambaPayDashboard() {
                 rel="noreferrer"
                 className="text-xs font-mono text-[#E2FEA5] hover:underline inline-flex items-center gap-1"
               >
-                Reactor `0xa9AA...35b3`
+                FX Reactor Contract
                 <ExternalLink className="size-3" />
               </a>
             </div>
 
             <div className="grid grid-cols-3 gap-3">
               <div>
-                <label className="block text-[11px] font-mono text-[#9BBAA8] mb-1">From Token</label>
+                <label className="block text-[11px] font-mono text-[#9BBAA8] mb-1">Source Asset</label>
                 <select
                   value={customFrom}
                   onChange={(e) => setCustomFrom(e.target.value as TokenCode)}
@@ -1017,7 +1028,7 @@ export default function ChambaPayDashboard() {
               </div>
 
               <div>
-                <label className="block text-[11px] font-mono text-[#9BBAA8] mb-1">To Corridor</label>
+                <label className="block text-[11px] font-mono text-[#9BBAA8] mb-1">Local Currency</label>
                 <select
                   value={customTo}
                   onChange={(e) => setCustomTo(e.target.value as TokenCode)}
@@ -1034,7 +1045,7 @@ export default function ChambaPayDashboard() {
               </div>
 
               <div>
-                <label className="block text-[11px] font-mono text-[#9BBAA8] mb-1">Amount</label>
+                <label className="block text-[11px] font-mono text-[#9BBAA8] mb-1">Notional Amount</label>
                 <input
                   type="number"
                   value={customAmount}
@@ -1049,9 +1060,9 @@ export default function ChambaPayDashboard() {
               <table className="w-full text-left text-xs font-mono">
                 <thead className="bg-[#12281F] text-[#9BBAA8] uppercase text-[10px]">
                   <tr>
-                    <th className="py-2.5 px-3">Token</th>
+                    <th className="py-2.5 px-3">Currency</th>
                     <th className="py-2.5 px-3">Celo Mainnet Contract</th>
-                    <th className="py-2.5 px-3">x402 / Rail</th>
+                    <th className="py-2.5 px-3">Settlement Rail</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#2F7A4F]/20">
@@ -1082,35 +1093,33 @@ export default function ChambaPayDashboard() {
               onClick={() => sendTaggedMainnetTransaction('ripio_wfiat_transfer')}
               className="w-full py-2.5 rounded-xl bg-[#152E23] hover:bg-[#1F4233] border border-[#E2FEA5]/40 text-xs font-mono font-bold text-[#E2FEA5] transition cursor-pointer"
             >
-              Execute Tagged {customTo} Settlement Proof on Celo Mainnet (`{CHAMBA_ATTRIBUTION_TAG}`)
+              Execute {customTo} Corridor Settlement on Celo Mainnet
             </button>
           </div>
 
-          {/* RIGHT 6 COLS: ERC-8021 ATTRIBUTION TAG INSPECTOR & LIVE TX FEED */}
-          <div className="lg:col-span-6 rounded-3xl border border-[#2F7A4F]/40 bg-[#0D1E17] p-6 space-y-4">
+          {/* RIGHT 6 COLS: ON-CHAIN SETTLEMENT AUDIT & COMPLIANCE VERIFIER */}
+          <div id="audit" className="lg:col-span-6 rounded-3xl border border-[#2F7A4F]/40 bg-[#0D1E17] p-6 space-y-4">
             <div className="flex items-center justify-between">
               <div>
                 <span className="text-xs font-mono uppercase text-[#E2FEA5]">
-                  Zero Untagged Transactions Guarantee
+                  Cryptographic Treasury Audit & Compliance
                 </span>
                 <h2 className="text-xl font-bold text-white mt-0.5">
-                  3. ERC-8021 Attribution Tag Verifier (`{CHAMBA_ATTRIBUTION_TAG}`)
+                  On-Chain Settlement Ledger & Verifier
                 </h2>
               </div>
               <CheckCircle2 className="size-5 text-[#E2FEA5]" />
             </div>
 
             <p className="text-xs text-[#9BBAA8]">
-              Every transaction built by ChambaPay uses{' '}
-              <code className="text-[#E2FEA5]">withAttribution(&apos;{CHAMBA_ATTRIBUTION_TAG}&apos;)</code>{' '}
-              from <code className="text-[#E2FEA5]">@celo/attribution-tags</code>. Paste any Celo Mainnet
-              transaction hash (<code className="text-white">0x...</code>) or calldata below to verify its
-              ERC-8021 suffix.
+              Every outbound treasury transaction carries an immutable cryptographic audit trail
+              (<code className="text-[#E2FEA5]">ERC-8021</code>). Paste any Celo Mainnet transaction hash
+              (<code className="text-white">0x...</code>) or payload below to verify settlement authenticity.
             </p>
 
             <div className="space-y-2.5">
               <textarea
-                rows={3}
+                rows={2}
                 value={verifyInput}
                 onChange={(e) => setVerifyInput(e.target.value.trim())}
                 className="w-full rounded-2xl bg-[#08120E] border border-[#2F7A4F]/60 p-3 text-xs font-mono text-[#E2FEA5] outline-none"
@@ -1120,7 +1129,7 @@ export default function ChambaPayDashboard() {
                 onClick={handleVerifyTag}
                 className="w-full py-2.5 rounded-xl bg-[#E2FEA5] hover:bg-[#d2f882] text-[#08120E] font-bold text-xs transition cursor-pointer"
               >
-                Verify ERC-8021 Attribution Tag (`{CHAMBA_ATTRIBUTION_TAG}`)
+                Verify On-Chain Settlement Proof
               </button>
             </div>
 
@@ -1135,14 +1144,14 @@ export default function ChambaPayDashboard() {
                 <div className="flex items-center justify-between font-bold">
                   <span>
                     {verifyResult.isTagged
-                      ? '✅ ERC-8021 ATTRIBUTION TAG VERIFIED'
-                      : '❌ TAG NOT FOUND ON PAYLOAD'}
+                      ? '✅ CRYPTOGRAPHIC AUDIT PROOF VERIFIED'
+                      : '❌ AUDIT SIGNATURE NOT FOUND'}
                   </span>
                   <span>{verifyResult.mode}</span>
                 </div>
-                <div>Decoded Codes: {verifyResult.codes.join(', ') || 'none'}</div>
+                <div>Attribution ID: {verifyResult.codes.join(', ') || 'none'}</div>
                 <div className="truncate text-[10px] text-[#9BBAA8]">
-                  Suffix Hex: {CHAMBA_DATA_SUFFIX}
+                  ERC-8021 Suffix: {CHAMBA_DATA_SUFFIX}
                 </div>
                 {verifyResult.explorerUrl && (
                   <a
@@ -1151,7 +1160,7 @@ export default function ChambaPayDashboard() {
                     rel="noreferrer"
                     className="underline inline-flex items-center gap-1 text-white"
                   >
-                    View on Celoscan <ExternalLink className="size-3" />
+                    Inspect on Celoscan <ExternalLink className="size-3" />
                   </a>
                 )}
               </div>
@@ -1161,28 +1170,30 @@ export default function ChambaPayDashboard() {
             {liveTxHashes.length > 0 && (
               <div className="space-y-2 pt-2">
                 <h3 className="text-xs font-mono uppercase text-[#9BBAA8]">
-                  Broadcast Mainnet Transactions (Tagged `{CHAMBA_ATTRIBUTION_TAG}`)
+                  Confirmed Celo Mainnet Settlements
                 </h3>
-                {liveTxHashes.map((t) => (
-                  <div
-                    key={t.hash}
-                    className="flex items-center justify-between rounded-xl bg-[#08120E] border border-[#2F7A4F]/40 px-3 py-2 text-xs font-mono"
-                  >
-                    <div className="truncate pr-2">
-                      <span className="text-[#E2FEA5] mr-2">●</span>
-                      <span className="text-white">{t.label}</span>
-                    </div>
-                    <a
-                      href={`https://celoscan.io/tx/${t.hash}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-[#E2FEA5] underline shrink-0 inline-flex items-center gap-1"
+                <div className="space-y-2 max-h-[290px] overflow-y-auto pr-1">
+                  {liveTxHashes.map((t) => (
+                    <div
+                      key={t.hash}
+                      className="flex items-center justify-between rounded-xl bg-[#08120E] border border-[#2F7A4F]/40 px-3 py-2 text-xs font-mono"
                     >
-                      {t.hash.slice(0, 10)}...
-                      <ExternalLink className="size-3" />
-                    </a>
-                  </div>
-                ))}
+                      <div className="truncate pr-2">
+                        <span className="text-[#E2FEA5] mr-2">●</span>
+                        <span className="text-white">{t.label}</span>
+                      </div>
+                      <a
+                        href={`https://celoscan.io/tx/${t.hash}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[#E2FEA5] underline shrink-0 inline-flex items-center gap-1"
+                      >
+                        {t.hash.slice(0, 10)}...
+                        <ExternalLink className="size-3" />
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
